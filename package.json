@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/celsoandre285/site_de_noticia#readme",
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0"
   }
 }

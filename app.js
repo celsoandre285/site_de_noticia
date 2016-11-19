@@ -1,30 +1,39 @@
 
-//importando biblioteca http
-var http = require('http');
+//importando biblioteca express
+var express = require('express');
+//chamada função express
+var aplicacao = express();
 
-//criando o servidor
-var server = http.createServer(function (req, res) {
-	// recuperando a requisição url
-	var categoria = req.url;
-	
-	console.log(categoria);
-	//definindo a rota
-	if (categoria == '/moda') {
-		
-		res.end("<html><body><h1>site de teste Moda</h1></body></html>");
-		
-	} else if(categoria == '/tecnologia'){
-		
-		res.end("<html><body><h1>site de teste tecnologia</h1></body></html>");
+//informando gerador de views
+aplicacao.set('view engine', 'ejs');
 
-	}	else {
-		
-		res.end("<html><body><h1>site de teste home</h1></body></html>");
-	
-	}
-	
-	
-	
+
+//respondendo as requisições
+
+aplicacao.get('/tecnologia', function (request, response) {
+	response.render("secao/tecnologia"); 
 });
-// colocar o servidor escutando na porta 3000
-server.listen(3000);
+
+aplicacao.get('/', function (request, response) {
+	response.render("home/index"); 
+});
+
+aplicacao.get('/noticia', function (request, response) {
+	response.render("noticias/noticia"); 
+});
+
+aplicacao.get('/noticias', function (request, response) {
+	response.render("noticias/noticias"); 
+});
+
+aplicacao.get('/formulario_add_noticia', function (request, response) {
+	response.render("admin/formulario_add_noticia"); 
+});
+
+
+
+
+
+aplicacao.listen(3000, function () {
+	console.log("Servidor ON!");
+});
