@@ -1,0 +1,22 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "site de noticias",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celsoandre285/site_de_noticia.git"
+  },
+  "author": "celso andre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celsoandre285/site_de_noticia/issues"
+  },
+  "homepage": "https://github.com/celsoandre285/site_de_noticia#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

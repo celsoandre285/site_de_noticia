@@ -1,8 +1,5 @@
-
-//importando biblioteca http
 var http = require('http');
 
-//criando o servidor
 var server = http.createServer(function (req, res) {
 	// recuperando a requisição url
 	var categoria = req.url;
@@ -26,5 +23,5 @@ var server = http.createServer(function (req, res) {
 	
 	
 });
-// colocar o servidor escutando na porta 3000
+
 server.listen(3000);
